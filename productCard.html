@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .product-card {
+      width: 300px;
+      height: 680px;
+      box-sizing: border-box;
+      /* background-color: beige; */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.694);
+      margin: auto;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 50%;
+      text-align: center;
+    }
+
+    #product-image {
+      width: auto;
+      height: 100%;
+      border-radius: 10%;
+      box-shadow: -4px 4px 8px grey;
+    }
+
+    #product-name {
+      font-size: 120%;
+    }
+
+    #price {
+      font-size: 130%;
+      margin: 0px;
+      text-shadow: 0.5px 0.5px 8px rgba(128, 128, 128, 0.593);
+    }
+
+    #old-price {
+      color: grey;
+      font-size: 80%;
+      text-decoration: line-through;
+    }
+
+    #discount {
+      font-size: 110%;
+      color: rgb(35, 219, 99);
+    }
+
+    #product-description {
+      letter-spacing: 1px;
+    }
+
+    .specification-container {
+      overflow: hidden;
+      height: 160px;
+      margin-bottom: 8px;
+    }
+
+    .stack-container {
+      width: 80px;
+    }
+
+    .stack {
+      width: 100%;
+      aspect-ratio: 1;
+      margin-left: 35%;
+      border-radius: 50%;
+      box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.491);
+    }
+
+    #first-color {
+      width: 30%;
+      margin: 0px;
+      background-color: #555859;
+    }
+
+    #second-color {
+      background-color: hsl(337, 89%, 73%);
+    }
+
+    #third-color {
+      background-color: #5bc8c3;
+    }
+
+    #fourth-color {
+      background-color: #8b9fef;
+    }
+
+    #fifth-color {
+      background-color: #FAFAFA;
+    }
+
+    details {
+      list-style: none;
+    }
+
+    summary {
+      list-style: none;
+      margin-bottom: 6px;
+      margin-top: 8px;
+    }
+
+    .color-container-container {
+      width: 100%;
+      height: 120px;
+      position: relative;
+    }
+
+    .colour-container {
+      height: 120px;
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      overflow: auto;
+      justify-content: space-around;
+      position: relative;
+      gap: 10px;
+      align-items: center;
+      box-sizing: border-box;
+      border-radius: 8px;
+      background-color: inherit;
+    }
+
+    .shadow-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0px 0px 8px rgba(136, 134, 134, 0.5);
+      /* box-shadow: inset 0px 0px 3px black; */
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .varient-container {
+      width: 32%;
+      aspect-ratio: 1;
+      background-color: white;
+      padding: 3px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px grey;
+    }
+
+    .color-varient {
+      width: auto;
+      height: 100%;
+      background-color: white;
+      margin: auto;
+      display: block;
+    }
+
+    .varient-name {
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    #specification-header {
+      margin: 4px;
+      font-weight: 200;
+    }
+
+    #specification-list {
+      font-weight: 100;
+      color: rgba(0, 0, 0, 0.665);
+      margin-top: 5px;
+      margin-left: 0px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .button {
+      background-color: rgb(6, 97, 6);
+      padding: 8px;
+      border-radius: 30px;
+      width: 90%;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: 1px 1px 4px grey;
+    }
+
+    #button-addtokart {
+      background-color: rgb(239, 225, 170);
+    }
+
+    #button-buynow {
+      background-color: rgb(241, 205, 151);
+    }
+  </style>
+  <body>
+    <div class="product-card">
+      <div class="image-container">
+        <img
+          src="./productImages/phone16_black.png"
+          alt="Iphone 16 black"
+          id="product-image"
+        />
+      </div>
+
+      <h1 id="product-name">Iphone 16 (Black)</h1>
+
+      <div class="price-container">
+        <span id="price">₹69,999</span>
+        <span id="old-price">₹79,999</span>
+        <span id="discount">12% off</span>
+      </div>
+
+      <div class="specification-container">
+        <details>
+          <summary>
+            <div class="stack-container">
+              <div class="stack" id="first-color">
+                <div class="stack" id="second-color">
+                  <div class="stack" id="third-color">
+                    <div class="stack" id="fourth-color">
+                      <div class="stack" id="fifth-color"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </summary>
+
+          <div class="color-container-container">
+            <div class="shadow-overlay"></div>
+            <div class="colour-container">
+              <div class="varient-container">
+                <img
+                  src="./productImages/phone16_black.png"
+                  alt="iphone16 black"
+                  class="color-varient"
+                />
+                <p class="varient-name">Black</p>
+              </div>
+
+              <div class="varient-container">
+                <img
+                  src="./productImages/iphone16_pink (1).png"
+                  alt="iphone16 pink"
+                  class="color-varient"
+                />
+                <p class="varient-name">Pink</p>
+              </div>
+
+              <div class="varient-container">
+                <img
+                  src="./productImages/Iphone16_teal.png"
+                  alt="\Iphone16 teal"
+                  class="color-varient"
+                />
+                <p class="varient-name">Teal</p>
+              </div>
+
+              <div class="varient-container">
+                <img
+                  src="./productImages/Iphone16_ultramarine.png"
+                  alt="Iphone16 ultramarine"
+                  class="color-varient"
+                />
+                <p class="varient-name">Ultramarine</p>
+              </div>
+
+              <div class="varient-container">
+                <img
+                  src="./productImages/Iphone16_white.png"
+                  alt="Iphone16 white"
+                  class="color-varient"
+                />
+                <p class="varient-name">White</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <h4 id="specification-header">specification</h4>
+        <ul id="specification-list">
+          <li class="specification-item">
+            6.1-inch Super Retina XDR OLED display
+          </li>
+          <li class="specification-item">A18 chip with 6-core CPU</li>
+          <li class="specification-item">Battery capacity: 3561 mAh</li>
+          <li class="specification-item">Camera control button</li>
+        </ul>
+      </div>
+
+      <div class="button-container">
+        <div class="button" id="button-addtokart">Add To Cart</div>
+        <div class="button" id="button-buynow">Buy Now</div>
+      </div>
+    </div>
+  </body>
+</html>
